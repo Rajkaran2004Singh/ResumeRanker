@@ -1,6 +1,7 @@
 import pdfplumber
 import os
 import spacy
+nlp = spacy.load("en_core_web_sm")
 from sentence_transformers import SentenceTransformer, util
 model = SentenceTransformer('all-MiniLM-L6-v2')
 import re
@@ -8,14 +9,6 @@ from collections import defaultdict
 import streamlit as st
 import subprocess
 import sys
-
-try:
-    import en_core_web_sm
-except ImportError:
-    subprocess.run([sys.executable, "-m", "spacy", "download", "en_core_web_sm"])
-
-nlp = en_core_web_sm.load()
-
 
 def extract_pdf_text(file):
     full_text = ""
