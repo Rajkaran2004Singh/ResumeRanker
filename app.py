@@ -125,7 +125,7 @@ jd_text = st.text_area("Job Description")
 
 uploaded_files = st.file_uploader("Upload Resume PDFs", type="pdf", accept_multiple_files=True)
 
-if st.button("🚀 Match Resumes"):
+if st.button("Match Resumes"):
     if not jd_text.strip():
         st.warning("Please enter a job description.")
     elif not uploaded_files:
@@ -144,6 +144,6 @@ if st.button("🚀 Match Resumes"):
         for res in sorted(results, key=lambda x: -x["score"]):
             st.write(f"**{res['file']}**")
             st.write(f"Similarity Score: **{res['score']}**")
-            st.write(f"✅ Matched Skills: {', '.join(res['matched_skills'])}")
-            st.write(f"❌ Missing Skills: {', '.join(res['missing_skills'])}")
+            st.write(f"Matched Skills: {', '.join(res['matched_skills'])}")
+            st.write(f"Missing Skills: {', '.join(res['missing_skills'])}")
             st.markdown("---")
