@@ -14,11 +14,11 @@ This project uses Natural Language Processing (NLP) and semantic similarity tech
 7. Interactive web interface to upload resumes and input JD
 
 # Technologies Used
-Language : Python                                     
-NLP : spaCy, Sentence-Transformers(MiniLM)
-ML Backend : PyTorch(for BERT embeddings)
-PDF Parsing : pdfplumber
-Web App : Streamlit (only for UI rendering)          
+1.Language : Python
+2.NLP : spaCy, Sentence-Transformers(MiniLM)
+3.ML Backend : PyTorch(for BERT embeddings)
+4.PDF Parsing : pdfplumber
+5.Web App : Streamlit (only for UI rendering)
 
 # NLP Pipeline
 
